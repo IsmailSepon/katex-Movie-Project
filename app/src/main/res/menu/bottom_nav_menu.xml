@@ -9,6 +9,7 @@
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/search_selector"
+        android:checked="true"
         android:title="" />
 
     <item

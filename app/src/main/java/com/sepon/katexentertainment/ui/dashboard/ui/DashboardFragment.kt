@@ -48,8 +48,6 @@ class DashboardFragment : Fragment(), MoviesAdapter.RecyclerViewClickListener {
 
             movieListData.observe(viewLifecycleOwner, Observer { list ->
                 list.let { it1 ->
-
-                    Toast.makeText(requireContext(), "${it1?.size}", Toast.LENGTH_SHORT).show()
                     movie_recyclerview.also {
                         it.layoutManager  =StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL) //LinearLayoutManager(requireActivity().applicationContext, staggeredGridLayoutManager, false)
                         it.setHasFixedSize(true)
