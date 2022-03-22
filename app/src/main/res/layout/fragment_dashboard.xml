@@ -4,10 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="com.sepon.katexentertainment.ui.dashboard.ui.DashboardViewModel" />
     </data>
+
+
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,17 +25,19 @@
             android:id="@+id/editText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="37dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="105dp"
             android:background="@drawable/et_bg"
             android:drawableStart="@drawable/ic_search"
             android:drawablePadding="23dp"
             android:fontFamily="@font/advent_pro"
             android:hint="Search"
             android:paddingStart="15dp"
+            android:textColor="#fff"
             android:textColorHint="#FFF"
             android:textSize="16sp"
-            android:textColor="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="RtlSymmetry" />
@@ -48,16 +55,65 @@
             app:layout_constraintTop_toTopOf="@+id/editText" />
 
 
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/star_movie_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginEnd="32dp"
             android:layout_marginTop="32dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.dataLoading ? View.VISIBLE : View.GONE }"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/movie_recyclerview" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movie_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:listitem="@layout/movie_item" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/advent_pro"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/star_movie_recyclerview"
+            app:layout_constraintTop_toBottomOf="@+id/star_movie_recyclerview" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/advent_pro"
+            android:text="See all"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="@+id/star_movie_recyclerview"
+            app:layout_constraintTop_toTopOf="@+id/textView5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

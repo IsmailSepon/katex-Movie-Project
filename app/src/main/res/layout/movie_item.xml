@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="movie"
+            type="com.sepon.katexentertainment.ui.dashboard.data.model.ItemsItem" />
+
+<!--        <variable-->
+<!--            name="clickListener"-->
+<!--            type="com.bdjobs.app.videoResume.ui.questions.ClickListener" />-->
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:background="#191A32"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="15dp"
+            android:id="@+id/imageView2"
+            android:layout_margin="5dp"
+            android:elevation="10dp">
+
+            <ImageView
+                android:id="@+id/roundedImageView"
+                android:layout_width="148dp"
+                android:layout_height="200dp"
+                android:src="@drawable/movie_banner"
+                android:background="@color/white"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/advent_pro"
+            android:text="@{movie.title}"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            tools:text="Wonder Women" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Comedy"
+            android:text="@{movie.fullTitle}"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/advent_pro"
+            android:textColor="#AAAAAA"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
