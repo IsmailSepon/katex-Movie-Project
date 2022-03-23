@@ -15,7 +15,13 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.sepon.katexentertainment.ui.dashboard.ui.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_searchFragment2"
+            app:destination="@id/searchFragment2"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_up" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
@@ -28,4 +34,9 @@
         android:name="com.sepon.katexentertainment.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/searchFragment2"
+        android:name="com.sepon.katexentertainment.ui.search.SearchFragment"
+        android:label="SearchFragment" />
 </navigation>

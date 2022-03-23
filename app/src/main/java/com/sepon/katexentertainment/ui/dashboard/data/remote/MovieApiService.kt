@@ -4,6 +4,7 @@ import android.content.Context
 import com.localebro.okhttpprofiler.OkHttpProfilerInterceptor
 import com.sepon.katexentertainment.ui.dashboard.data.model.GetMovieResponse
 import com.sepon.katexentertainment.ui.dashboard.util.NetworkConnectionInterceptor
+import com.sepon.katexentertainment.ui.search.data.model.SearchResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -23,6 +24,9 @@ interface MovieApiService {
 
     @GET("MostPopularMovies/k_i6f1t24j")
     suspend fun getMoviesList(): Response<GetMovieResponse>
+
+    @GET("SearchMovie/k_i6f1t24j")
+    suspend fun getMoviesSearch(): Response<SearchResponse>
 
 
 
