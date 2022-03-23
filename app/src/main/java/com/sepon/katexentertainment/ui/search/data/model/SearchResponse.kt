@@ -1,6 +1,9 @@
 package com.sepon.katexentertainment.ui.search.data.model
 
+import android.os.Parcelable
+import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 data class SearchResponse(
 
@@ -17,6 +20,8 @@ data class SearchResponse(
 	val results: List<ResultsItem?>? = null
 )
 
+@Keep
+@Parcelize
 data class ResultsItem(
 
 	@field:SerializedName("image")
@@ -33,4 +38,4 @@ data class ResultsItem(
 
 	@field:SerializedName("resultType")
 	val resultType: String? = null
-)
+): Parcelable

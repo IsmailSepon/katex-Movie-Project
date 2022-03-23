@@ -12,6 +12,8 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
+
 
 private const val MOVIE_BASE_URL = "https://imdb-api.com/en/API/"
 
@@ -22,12 +24,11 @@ private val moshi = Moshi.Builder()
 interface MovieApiService {
 
 
-    @GET("MostPopularMovies/k_i6f1t24j")
+    @GET("MostPopularMovies/k_f9iilbnb")
     suspend fun getMoviesList(): Response<GetMovieResponse>
 
-    @GET("SearchMovie/k_i6f1t24j")
-    suspend fun getMoviesSearch(): Response<SearchResponse>
-
+    @GET("SearchMovie/k_f9iilbnb/{key}")
+    suspend fun getMoviesSearch(@Path("key") key : String): Response<SearchResponse>
 
 
     companion object Factory {

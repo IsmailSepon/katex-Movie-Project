@@ -37,6 +37,28 @@
 
     <fragment
         android:id="@+id/searchFragment2"
+        tools:layout="@layout/fragment_search"
         android:name="com.sepon.katexentertainment.ui.search.SearchFragment"
-        android:label="SearchFragment" />
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment2_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        tools:layout="@layout/fragment_details"
+        android:name="com.sepon.katexentertainment.ui.details.DetailsFragment"
+        android:label="DetailsFragment">
+
+
+        <argument
+            android:name="movie"
+            app:argType="com.sepon.katexentertainment.ui.search.data.model.ResultsItem"
+            app:nullable="true" />
+    </fragment>
+
+
+
 </navigation>

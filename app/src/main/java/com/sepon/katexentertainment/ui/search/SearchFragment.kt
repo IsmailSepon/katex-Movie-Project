@@ -1,20 +1,29 @@
 package com.sepon.katexentertainment.ui.search
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextSwitcher
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
+import com.sepon.katexentertainment.communicator.Communicator
 import com.sepon.katexentertainment.databinding.FragmentSearchBinding
 import com.sepon.katexentertainment.ui.search.data.adapter.MoviesSearchAdapter
 import com.sepon.katexentertainment.ui.dashboard.factory.ViewModelFactoryUtil
+import com.sepon.katexentertainment.ui.dashboard.ui.DashboardFragmentDirections
+import com.sepon.katexentertainment.ui.details.DetailsFragment
+import com.sepon.katexentertainment.ui.details.DetailsFragmentArgs
+import com.sepon.katexentertainment.ui.search.data.adapter.ClickListener
 import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment : Fragment() {
@@ -26,6 +35,7 @@ class SearchFragment : Fragment() {
 
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
+    lateinit var  communicator : Communicator
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,12 +57,16 @@ class SearchFragment : Fragment() {
         searchViewModel.apply {
 
             movieSearchListData.observe(viewLifecycleOwner, Observer { list ->
-                list.let { it1 ->
-                    search_movie_recyclerview.also {
-                        it.layoutManager  = LinearLayoutManager(requireActivity().applicationContext, LinearLayoutManager.VERTICAL, false)
-                        it.setHasFixedSize(true)
+                list.let {
+                    search_movie_recyclerview.also { it1 ->
+                        it1.layoutManager  = LinearLayoutManager(requireActivity().applicationContext, LinearLayoutManager.VERTICAL, false)
+                        it1.setHasFixedSize(true)
                         if (list != null){
-                            it.adapter = MoviesSearchAdapter(list, requireActivity().applicationContext )
+                            it1.adapter = MoviesSearchAdapter(list, requireActivity().applicationContext, ClickListener{
+                                communicator.hideBottomNav()
+                                findNavController().navigate(SearchFragmentDirections.actionSearchFragment2ToDetailsFragment(it))
+
+                            })
                         }
                     }
                 }
@@ -64,7 +78,15 @@ class SearchFragment : Fragment() {
         }
     }
 
+
+    override fun onResume() {
+        super.onResume()
+        communicator.showBottomNav()
+    }
+
     private fun init() {
+
+        communicator = activity as Communicator
         tabs.addTab(tabs.newTab().setText("All"))
         tabs.addTab(tabs.newTab().setText("Action"))
         tabs.addTab(tabs.newTab().setText("Comedy"))
@@ -78,11 +100,29 @@ class SearchFragment : Fragment() {
 
         tabs.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
-                Toast.makeText(requireContext(), "${tab.text}", Toast.LENGTH_SHORT).show()
+                searchViewModel.getMovies(tab.text.toString())
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {}
             override fun onTabReselected(tab: TabLayout.Tab) {}
+        })
+
+        search_clear.setOnClickListener {
+            editText.text.clear()
+        }
+
+        editText.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                if (s?.length!! >= 2){
+                    searchViewModel.getMovies(s.toString())
+                }
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
         })
     }
 

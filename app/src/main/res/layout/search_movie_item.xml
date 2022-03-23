@@ -11,15 +11,16 @@
             name="searchmovie"
             type="com.sepon.katexentertainment.ui.search.data.model.ResultsItem" />
 
-        <!--        <variable-->
-        <!--            name="clickListener"-->
-        <!--            type="com.bdjobs.app.videoResume.ui.questions.ClickListener" />-->
+                <variable
+                    name="clickListener"
+                    type="com.sepon.katexentertainment.ui.search.data.adapter.ClickListener" />
     </data>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:background="#191A32"
+        android:layout_marginBottom="24dp"
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
@@ -45,77 +46,102 @@
                 tools:ignore="ContentDescription" />
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/textView2"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/advent_pro"
-            android:text="@{searchmovie.title}"
-            android:textColor="@color/white"
-            android:textSize="18sp"
+            android:layout_height="140dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
-            tools:text="Wonder Women" />
+            app:layout_constraintTop_toTopOf="@+id/imageView2">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/advent_pro"
-            android:text="@{searchmovie.description}"
-            android:textColor="#696969"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
-            app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            tools:text="Comedy" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/advent_pro"
+                android:text="@{searchmovie.title}"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Wonder Women" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:srcCompat="@drawable/ic_star"
-            android:src="@drawable/ic_star"/>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/advent_pro"
+                android:text="@{searchmovie.description}"
+                android:textColor="#696969"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                tools:text="Comedy" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="6.5"
-            android:fontFamily="@font/advent_pro"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_star"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:srcCompat="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/advent_pro"
+                android:text="6.5"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/advent_pro"
+                android:onClick="@{()->clickListener.onClick(searchmovie)}"
+                android:text="Watch Now"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.01"
+                app:layout_constraintStart_toStartOf="@+id/imageView3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:background="@drawable/button_bg"
-            android:backgroundTint="@drawable/button_bg"
-            android:fontFamily="@font/advent_pro"
-            android:gravity="center_vertical"
-            android:text="Watch Now"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.809"
-            tools:ignore="RtlCompat" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="4dp"-->
+<!--            android:background="@drawable/button_bg"-->
+<!--            android:backgroundTint="@drawable/button_bg"-->
+<!--            android:fontFamily="@font/advent_pro"-->
+<!--            android:text="Watch Now"-->
+<!--            android:textAlignment="center"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/imageView3"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView3"/>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

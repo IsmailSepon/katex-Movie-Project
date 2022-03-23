@@ -1,17 +1,14 @@
-package com.sepon.katexentertainment.ui.search
+package com.sepon.katexentertainment.ui.details
 
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sepon.katexentertainment.ui.dashboard.data.model.ItemsItem
-import com.sepon.katexentertainment.ui.dashboard.data.repository.MovieListRepository
 import com.sepon.katexentertainment.ui.search.data.model.ResultsItem
 import com.sepon.katexentertainment.ui.search.repository.MovieSearchRepository
 import kotlinx.coroutines.launch
 
-class SearchViewModel(
+class DetailsViewModel(
     private val repository: MovieSearchRepository
 )  : ViewModel() {
 

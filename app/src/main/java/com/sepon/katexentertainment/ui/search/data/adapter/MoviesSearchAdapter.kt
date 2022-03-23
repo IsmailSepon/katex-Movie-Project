@@ -18,47 +18,53 @@ import com.sepon.katexentertainment.ui.search.data.model.ResultsItem
 class MoviesSearchAdapter (
     private val movies: List<ResultsItem?>?,
     mContext: Context,
-//    private val listener: RecyclerViewClickListener
-) : RecyclerView.Adapter<MoviesSearchAdapter.JobsViewHolder>(){
+    val clickListener: ClickListener
+) : RecyclerView.Adapter<MoviesSearchAdapter.JobsViewHolder>() {
 
     private val mContext = mContext
     override fun getItemCount() = movies!!.size
 
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        JobsViewHolder(DataBindingUtil.inflate(LayoutInflater.from(mContext), R.layout.movie_item, parent, false)
+        JobsViewHolder(
+            DataBindingUtil.inflate(
+                LayoutInflater.from(mContext),
+                R.layout.search_movie_item,
+                parent,
+                false
+            )
         )
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: JobsViewHolder, position: Int) {
+        holder.bind(movies!![position]!!, clickListener)
+        holder.recyclerviewJobBinding.searchmovie = movies[position]
 
-        holder.recyclerviewJobBinding.searchmovie = movies!![position]
-
-        if (movies[position]?.image != null){
+        if (movies[position]?.image != null) {
             Glide.with(mContext)
                 .load(movies[position]?.image!!)
                 .into(holder.recyclerviewJobBinding.roundedImageView);
         }
 
-
-        holder.itemView.setOnClickListener{
-            //listener.onRecyclerViewItemClick(it, movies[position]!!)
-        }
-
-
     }
-
-
 
 
     inner class JobsViewHolder(
         val recyclerviewJobBinding: SearchMovieItemBinding
-    ) : RecyclerView.ViewHolder(recyclerviewJobBinding.root)
-
-
-
-    interface RecyclerViewClickListener {
-        fun onRecyclerViewItemClick(view: View, movie: ItemsItem)
+    ) : RecyclerView.ViewHolder(recyclerviewJobBinding.root){
+        fun bind(movie: ResultsItem, clickListener: ClickListener) {
+            recyclerviewJobBinding.searchmovie = movie
+            recyclerviewJobBinding.executePendingBindings()
+            recyclerviewJobBinding.clickListener = clickListener
+        }
     }
+
+
+
+}
+
+    class ClickListener(val clickListener: (questionData : ResultsItem) -> Unit) {
+        fun onClick(questionData: ResultsItem) {
+            clickListener(questionData)
+        }
 }
