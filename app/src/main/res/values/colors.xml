@@ -13,5 +13,6 @@
     <color name="backGroundColor">#E6E2E2</color>
     <color name="textColor">#000</color>
     <color name="et">#FAF8F8</color>
+    <color name="hint">#A7A7A7</color>
     <color name="item">#FAF8F8</color>
 </resources>

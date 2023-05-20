@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Katex_Entertainment.iml" filepath="$PROJECT_DIR$/.idea/modules/Katex_Entertainment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Katex_Entertainment.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Katex_Entertainment.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Katex_Entertainment.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Katex_Entertainment.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Katex_Entertainment.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Katex_Entertainment.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Katex_Entertainment.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Katex_Entertainment.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
