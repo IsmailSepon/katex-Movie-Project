@@ -59,10 +59,10 @@ class SearchFragment : Fragment() {
             movieSearchListData.observe(viewLifecycleOwner, Observer { list ->
                 list.let {
                     search_movie_recyclerview.also { it1 ->
-                        it1.layoutManager  = LinearLayoutManager(requireActivity().applicationContext, LinearLayoutManager.VERTICAL, false)
+                        it1.layoutManager  = LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
                         it1.setHasFixedSize(true)
                         if (list != null){
-                            it1.adapter = MoviesSearchAdapter(list, requireActivity().applicationContext, ClickListener{
+                            it1.adapter = MoviesSearchAdapter(list, requireActivity(), ClickListener{
                                 communicator.hideBottomNav()
                                 findNavController().navigate(SearchFragmentDirections.actionSearchFragment2ToDetailsFragment(it))
 

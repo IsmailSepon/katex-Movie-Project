@@ -17,7 +17,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="#191A32"
+        android:background="@color/backGroundColor"
         android:layout_height="match_parent">
 
 
@@ -34,8 +34,8 @@
             android:fontFamily="@font/advent_pro"
             android:hint="Search"
             android:paddingStart="15dp"
-            android:textColor="#fff"
-            android:textColorHint="#FFF"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"
             android:textSize="16sp"
             android:focusable="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,7 @@
             android:layout_marginStart="32dp"
             android:fontFamily="@font/advent_pro"
             android:text="Cancel"
-            android:textColor="#fff"
+            android:textColor="@color/textColor"
             app:layout_constraintBottom_toBottomOf="@+id/editText"
             app:layout_constraintStart_toEndOf="@+id/editText"
             app:layout_constraintTop_toTopOf="@+id/editText" />
@@ -97,7 +97,7 @@
             android:text="Popular"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/advent_pro"
-            android:textColor="#fff"
+            android:textColor="@color/textColor"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/star_movie_recyclerview"
             app:layout_constraintTop_toBottomOf="@+id/star_movie_recyclerview" />
@@ -109,7 +109,7 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/advent_pro"
             android:text="See all"
-            android:textColor="#AAAAAA"
+            android:textColor="@color/textColor"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="@+id/star_movie_recyclerview"

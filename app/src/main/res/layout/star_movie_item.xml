@@ -19,7 +19,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="#191A32"
+        android:background="@android:color/transparent"
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
@@ -54,7 +54,7 @@
             android:fontFamily="@font/advent_pro"
             android:text="@{starmovie.title}"
             android:layout_marginTop="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/textColor"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -103,7 +103,7 @@
             android:layout_marginStart="8dp"
             android:text="6.5"
             android:fontFamily="@font/advent_pro"
-            android:textColor="@color/white"
+            android:textColor="@color/textColor"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView3"
             app:layout_constraintStart_toEndOf="@+id/imageView3"

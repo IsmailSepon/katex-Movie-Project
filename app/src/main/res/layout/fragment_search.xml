@@ -17,7 +17,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="#191A32"
+        android:background="@color/backGroundColor"
         android:layout_height="match_parent">
 
 
@@ -34,8 +34,8 @@
             android:fontFamily="@font/advent_pro"
             android:hint="Search"
             android:paddingStart="15dp"
-            android:textColor="#fff"
-            android:textColorHint="#FFF"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
-            android:background="#191A32"
+            android:background="@color/backGroundColor"
             android:scrollbarAlwaysDrawHorizontalTrack="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/editText"

@@ -23,11 +23,11 @@ private val moshi = Moshi.Builder()
 
 interface MovieApiService {
 
-
-    @GET("MostPopularMovies/k_f9iilbnb")
+//https://imdb-api.com/en/API/MostPopularMovies/k_ryab669v
+    @GET("MostPopularMovies/k_ryab669v")
     suspend fun getMoviesList(): Response<GetMovieResponse>
 
-    @GET("SearchMovie/k_f9iilbnb/{key}")
+    @GET("SearchMovie/k_ryab669v/{key}")
     suspend fun getMoviesSearch(@Path("key") key : String): Response<SearchResponse>
 
 
