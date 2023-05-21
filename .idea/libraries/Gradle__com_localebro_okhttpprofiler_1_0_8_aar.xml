@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.localebro:okhttpprofiler:1.0.8@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6d60d50417eec85231b4e8e1d1a148f0/transformed/okhttpprofiler-1.0.8/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6d60d50417eec85231b4e8e1d1a148f0/transformed/okhttpprofiler-1.0.8/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6d60d50417eec85231b4e8e1d1a148f0/transformed/okhttpprofiler-1.0.8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f2dd0ab458de510857d453efbea4da53/transformed/okhttpprofiler-1.0.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f2dd0ab458de510857d453efbea4da53/transformed/okhttpprofiler-1.0.8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f2dd0ab458de510857d453efbea4da53/transformed/okhttpprofiler-1.0.8/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.localebro/okhttpprofiler/1.0.8/31c0e41f8c80b097767982ba594cd6de78e7a13b/okhttpprofiler-1.0.8-javadoc.jar!/" />
