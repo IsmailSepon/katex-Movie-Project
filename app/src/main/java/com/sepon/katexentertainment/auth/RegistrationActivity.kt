@@ -181,6 +181,7 @@ class RegistrationActivity : AppCompatActivity() {
         }else if (requestCode == 100 && resultCode == RESULT_OK) {
             val imageBitmap = data?.extras?.get("data") as Bitmap
             imageView5.setImageBitmap(imageBitmap)
+            userSession.userPic = imageBitmap.toString()
         }else if (requestCode == SELECT_PHONE_NUMBER && resultCode == RESULT_OK) {
             if (data != null) {
                 contactPicked1(data)
