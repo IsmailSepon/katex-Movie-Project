@@ -2,8 +2,8 @@
   <library name="Gradle: androidx.navigation:navigation-ui-ktx:2.4.1@aar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6933b7bae3ffd7ab116c1fa9c5818d5e/transformed/navigation-ui-ktx-2.4.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6933b7bae3ffd7ab116c1fa9c5818d5e/transformed/navigation-ui-ktx-2.4.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6933b7bae3ffd7ab116c1fa9c5818d5e/transformed/navigation-ui-ktx-2.4.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6933b7bae3ffd7ab116c1fa9c5818d5e/transformed/navigation-ui-ktx-2.4.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

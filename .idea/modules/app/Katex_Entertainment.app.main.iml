@@ -33,12 +33,15 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/231335dbeffce6ce520fc76c662cfbc6/transformed/firebase-auth-ktx-22.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/7c2b9f6aa0c6051f5df24c87d1edb428/transformed/firebase-auth-22.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/736701d7dd479d8f776e63afcb43c306/transformed/play-services-location-21.0.1-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/3ddc6464f79e57ac2feccab19706d62b/transformed/firebase-database-ktx-20.2.1-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/3c16dba7bdd2b85dfa5b382cb4d27ad7/transformed/firebase-database-20.2.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/812078f1b8bfd0b9162febc66367e7f2/transformed/play-services-auth-api-phone-18.0.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a79bfe400508549bcd9e07ed0d4eddea/transformed/play-services-auth-base-18.0.4-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/b87108e57027793bfdc9095899b1b468/transformed/play-services-fido-20.0.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/028a71ad41301c1cca36459aa708ce1f/transformed/firebase-appcheck-interop-17.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/36736f4016f1b4d4b7d2173965e666bf/transformed/firebase-database-collection-18.0.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a1099436ae387f25a0c2e3176412f7c8/transformed/play-services-base-18.1.0-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/2e328f32b75e48f3f30db7fc8fd45d88/transformed/firebase-common-ktx-20.2.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/9b0b29db53f1f9bfef291411bb8036cd/transformed/firebase-common-ktx-20.3.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/b1c04502fc62f6aef8a600f61e3ec04e/transformed/firebase-auth-interop-20.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/32443461c296c0fbc1e40f32d51879a1/transformed/firebase-common-20.3.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/c0e3178a59ef5aeeab14cf60e2f172b6/transformed/recaptcha-18.1.2-api.jar</arg>
@@ -156,6 +159,7 @@
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-context/1.32.2/52f4c00cd3dba3f2196796957a9d516736d0c470/grpc-context-1.32.2.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.7.4/f2c0782541a970b3c15f5e742999ca264b34d0bd/okhttp-2.7.4.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.libphonenumber/libphonenumber/8.12.32/6e06d91dcb36eb8ba01a0fab97fc6d1da699b69a/libphonenumber-8.12.32.jar</arg>
                 <arg>$USER_HOME$/Library/Android/sdk/platforms/android-33/android.jar</arg>
                 <arg>$USER_HOME$/Library/Android/sdk/build-tools/30.0.2/core-lambda-stubs.jar</arg>
               </args>
@@ -294,6 +298,7 @@
     <orderEntry type="library" name="Gradle: io.grpc:grpc-context:1.32.2" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.2" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp:okhttp:2.7.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.googlecode.libphonenumber:libphonenumber:8.12.32" level="project" />
     <orderEntry type="library" name="Gradle: androidx.databinding:databinding-runtime:7.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.databinding:viewbinding:7.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.databinding:databinding-adapters:7.0.0@aar" level="project" />
@@ -311,12 +316,15 @@
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth-ktx:22.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth:22.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-location:21.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-database-ktx:20.2.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-database:20.2.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth-api-phone:18.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth-base:18.0.4@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-fido:20.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-appcheck-interop:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-database-collection:18.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-base:18.1.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-common-ktx:20.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-common-ktx:20.3.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth-interop:20.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-common:20.3.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.recaptcha:recaptcha:18.1.2@aar" level="project" />
