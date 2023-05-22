@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.babu.smartlock.sessionManager.UserSessionManager
 import com.sepon.katexentertainment.MainActivity
 import com.sepon.katexentertainment.R
+import kotlinx.android.synthetic.main.activity_login.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -75,6 +76,13 @@ class LoginActivity : AppCompatActivity() {
             }
 
         }
+
+        skip.setOnClickListener{
+            val i = Intent(this, MainActivity::class.java)
+            startActivity(i)
+            finish()
+        }
+
 
     }
 

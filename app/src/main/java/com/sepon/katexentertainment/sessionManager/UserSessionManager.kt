@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.core.content.edit
 import com.sepon.katexentertainment.sessionManager.Constance.Companion.name_sharedPref
 import com.sepon.katexentertainment.sessionManager.Constance.Companion.session_key_email
+import com.sepon.katexentertainment.sessionManager.Constance.Companion.session_key_favorite
 import com.sepon.katexentertainment.sessionManager.Constance.Companion.session_key_name
 import com.sepon.katexentertainment.sessionManager.Constance.Companion.session_key_userPicUrl
 
@@ -47,4 +48,12 @@ class UserSessionManager(val context: Context) {
         set(value) {
             pref!!.edit().putString(session_key_userPicUrl, value).apply()
         }
+
+    var favoritMovies: String?
+        get() = pref!!.getString(session_key_favorite, "")
+        set(value) {
+            pref!!.edit().putString(session_key_favorite, value).apply()
+        }
+
+
 }

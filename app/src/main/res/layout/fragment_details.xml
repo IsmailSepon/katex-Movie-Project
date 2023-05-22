@@ -100,6 +100,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
                     android:text="Captain Marvel"
+                    android:textAlignment="center"
                     android:textColor="#fff"
                     android:textSize="32sp"
                     app:layout_constraintBottom_toBottomOf="@+id/movie_imageview"
@@ -276,6 +277,7 @@
 
 
                 <Button
+                    android:id="@+id/watchNowBtn"
                     android:layout_width="222dp"
                     android:layout_height="52dp"
                     android:layout_marginStart="20dp"

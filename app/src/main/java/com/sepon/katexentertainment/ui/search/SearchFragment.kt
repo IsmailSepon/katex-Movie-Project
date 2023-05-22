@@ -6,24 +6,18 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextSwitcher
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.sepon.katexentertainment.communicator.Communicator
 import com.sepon.katexentertainment.databinding.FragmentSearchBinding
-import com.sepon.katexentertainment.ui.search.data.adapter.MoviesSearchAdapter
 import com.sepon.katexentertainment.ui.dashboard.factory.ViewModelFactoryUtil
-import com.sepon.katexentertainment.ui.dashboard.ui.DashboardFragmentDirections
-import com.sepon.katexentertainment.ui.details.DetailsFragment
-import com.sepon.katexentertainment.ui.details.DetailsFragmentArgs
 import com.sepon.katexentertainment.ui.search.data.adapter.ClickListener
+import com.sepon.katexentertainment.ui.search.data.adapter.MoviesSearchAdapter
 import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment : Fragment() {
@@ -108,7 +102,8 @@ class SearchFragment : Fragment() {
         })
 
         search_clear.setOnClickListener {
-            editText.text.clear()
+            findNavController().popBackStack()
+
         }
 
         editText.addTextChangedListener(object : TextWatcher {

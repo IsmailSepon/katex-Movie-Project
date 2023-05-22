@@ -12,7 +12,7 @@
     <!--For Night Mode Mode-->
     <color name="backGroundColor">#191A32</color>
     <color name="textColor">#fff</color>
-    <color name="et">#191A32</color>
+    <color name="et">#A7A7A7</color>
     <color name="hint">#A7A7A7</color>
     <color name="item">#191A32</color>
 </resources>

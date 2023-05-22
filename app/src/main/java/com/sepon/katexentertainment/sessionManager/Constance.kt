@@ -7,6 +7,7 @@ class Constance {
         const val session_key_name = "name"
         const val session_key_email = "email"
         const val session_key_userPicUrl = "pic"
+        const val session_key_favorite = "favorite"
 
 
     }

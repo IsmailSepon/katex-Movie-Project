@@ -59,6 +59,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/star_movie_recyclerview"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
@@ -94,25 +95,27 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Popular"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/advent_pro"
+            android:text="Popular"
             android:textColor="@color/textColor"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/star_movie_recyclerview"
-            app:layout_constraintTop_toBottomOf="@+id/star_movie_recyclerview" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:fontFamily="@font/advent_pro"
             android:text="See all"
             android:textColor="@color/textColor"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView5"
-            app:layout_constraintEnd_toEndOf="@+id/star_movie_recyclerview"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
